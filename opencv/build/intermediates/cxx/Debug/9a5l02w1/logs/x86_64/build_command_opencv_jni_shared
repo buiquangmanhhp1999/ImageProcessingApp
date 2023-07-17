@@ -1,0 +1,4 @@
+/home/dell/Android/Sdk/cmake/3.22.1/bin/ninja \
+  -C \
+  /home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/Debug/9a5l02w1/x86_64 \
+  opencv_jni_shared

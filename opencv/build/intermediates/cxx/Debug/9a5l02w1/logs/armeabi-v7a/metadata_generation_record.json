@@ -1,0 +1,156 @@
+[
+  {
+    "level_": 0,
+    "message_": "Start JSON generation. Platform version: 31 min SDK version: armeabi-v7a",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -733985791
+  },
+  {
+    "level_": 0,
+    "message_": "rebuilding JSON /home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/Debug/9a5l02w1/armeabi-v7a/android_gradle_build.json due to:",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 582891815
+  },
+  {
+    "level_": 0,
+    "message_": "- no fingerprint file, will remove stale configuration folder",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 328769841
+  },
+  {
+    "level_": 0,
+    "message_": "removing stale contents from \u0027/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/Debug/9a5l02w1/armeabi-v7a\u0027",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 1676700870
+  },
+  {
+    "level_": 0,
+    "message_": "created folder \u0027/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/Debug/9a5l02w1/armeabi-v7a\u0027",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -987366598
+  },
+  {
+    "level_": 0,
+    "message_": "executing cmake /home/dell/Android/Sdk/cmake/3.22.1/bin/cmake \\\n  -H/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d31 \\\n  -DANDROID_PLATFORM\u003dandroid-31 \\\n  -DANDROID_ABI\u003darmeabi-v7a \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a \\\n  -DANDROID_NDK\u003d/home/dell/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_ANDROID_NDK\u003d/home/dell/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/home/dell/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/home/dell/Android/Sdk/cmake/3.22.1/bin/ninja \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/build/intermediates/cxx/Debug/9a5l02w1/obj/armeabi-v7a \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/build/intermediates/cxx/Debug/9a5l02w1/obj/armeabi-v7a \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -B/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/Debug/9a5l02w1/armeabi-v7a \\\n  -GNinja \\\n  -DANDROID_STL\u003dc++_shared\n",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 1097796950
+  },
+  {
+    "level_": 0,
+    "message_": "/home/dell/Android/Sdk/cmake/3.22.1/bin/cmake \\\n  -H/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper \\\n  -DCMAKE_SYSTEM_NAME\u003dAndroid \\\n  -DCMAKE_EXPORT_COMPILE_COMMANDS\u003dON \\\n  -DCMAKE_SYSTEM_VERSION\u003d31 \\\n  -DANDROID_PLATFORM\u003dandroid-31 \\\n  -DANDROID_ABI\u003darmeabi-v7a \\\n  -DCMAKE_ANDROID_ARCH_ABI\u003darmeabi-v7a \\\n  -DANDROID_NDK\u003d/home/dell/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_ANDROID_NDK\u003d/home/dell/Android/Sdk/ndk/23.1.7779620 \\\n  -DCMAKE_TOOLCHAIN_FILE\u003d/home/dell/Android/Sdk/ndk/23.1.7779620/build/cmake/android.toolchain.cmake \\\n  -DCMAKE_MAKE_PROGRAM\u003d/home/dell/Android/Sdk/cmake/3.22.1/bin/ninja \\\n  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY\u003d/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/build/intermediates/cxx/Debug/9a5l02w1/obj/armeabi-v7a \\\n  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY\u003d/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/build/intermediates/cxx/Debug/9a5l02w1/obj/armeabi-v7a \\\n  -DCMAKE_BUILD_TYPE\u003dDebug \\\n  -B/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/Debug/9a5l02w1/armeabi-v7a \\\n  -GNinja \\\n  -DANDROID_STL\u003dc++_shared\n",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -1247783083
+  },
+  {
+    "level_": 0,
+    "message_": "Exiting generation of /home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/Debug/9a5l02w1/armeabi-v7a/compile_commands.json.bin normally",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": 432407903
+  },
+  {
+    "level_": 0,
+    "message_": "done executing cmake",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -2081241679
+  },
+  {
+    "level_": 0,
+    "message_": "hard linked /home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/Debug/9a5l02w1/armeabi-v7a/compile_commands.json to /home/dell/AndroidStudioProjects/ImageProcessing2/opencv/.cxx/tools/debug/armeabi-v7a/compile_commands.json",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -435403471
+  },
+  {
+    "level_": 0,
+    "message_": "JSON generation completed without problems",
+    "file_": "/home/dell/AndroidStudioProjects/ImageProcessing2/opencv/libcxx_helper/CMakeLists.txt",
+    "tag_": "debug|armeabi-v7a",
+    "diagnosticCode_": 0,
+    "memoizedIsInitialized": 1,
+    "unknownFields": {
+      "fields": {},
+      "fieldsDescending": {}
+    },
+    "memoizedSize": -1,
+    "memoizedHashCode": -143168595
+  }
+]
