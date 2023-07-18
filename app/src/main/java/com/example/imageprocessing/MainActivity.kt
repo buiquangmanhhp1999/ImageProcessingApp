@@ -26,6 +26,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.res.painterResource
 import com.example.imageprocessing.Visualize.drawRectangle
 import org.opencv.android.OpenCVLoader
 import org.opencv.core.Point
@@ -104,24 +105,13 @@ fun displayImage(
             fontSize = 25.sp,
         )
 
-        // read image from image resource ans display it on screen
-        val imgFile = File("/home/dell/Downloads/320748448_734027997655639_1289908280981014138_n.jpg")
-
-        // on below line we are checking if the image file exist or not.
-        var imgBitmap: Bitmap? = null
-        if (imgFile.exists()) {
-            // on below line we are creating an image bitmap variable
-            // and adding a bitmap to it from image file.
-            imgBitmap = BitmapFactory.decodeFile(imgFile.absolutePath)
-            val tgtImageBitmap = imgBitmap
-        }
-
-        val oriImageBitmap = ImageBitmap.imageResource(id = imageID)
-        val oriImageWidth = oriImageBitmap.width.toDouble()
-        val oriImageHeight = oriImageBitmap.height.toDouble()
+        val oriBitmap = ImageBitmap.imageResource(id = imageID).asAndroidBitmap()
+        val tgtBitmap = ImageBitmap.imageResource(id = imageID).asAndroidBitmap()
+        val oriImageWidth = oriBitmap.width.toDouble()
+        val oriImageHeight = tgtBitmap.height.toDouble()
 
         Image(
-            painter = BitmapPainter(image = oriImageBitmap),
+            painter = painterResource(id = imageID),
             contentDescription = description,
             contentScale = ContentScale.Crop,
             modifier = Modifier.wrapContentSize()
@@ -156,7 +146,7 @@ fun displayImage(
 
         // apply image processing algorithms into given image
         drawRectangle(
-            tgtImageBitmap.asAndroidBitmap(),
+            tgtBitmap,
             Point(0.0,  oriImageHeight / 2),
             Point(oriImageHeight, oriImageWidth),
             Scalar( 0.0, 0.0, 255.0 ),
@@ -166,7 +156,7 @@ fun displayImage(
 
         // visualize image after processing
         Image(
-            painter = BitmapPainter(image = tgtImageBitmap),
+            bitmap = tgtBitmap.asImageBitmap(),
             contentDescription = "Target Image",
             contentScale = ContentScale.Crop,
             modifier = Modifier.wrapContentSize()
