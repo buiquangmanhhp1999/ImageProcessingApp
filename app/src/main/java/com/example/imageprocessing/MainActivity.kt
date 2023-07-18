@@ -1,5 +1,7 @@
 package com.example.imageprocessing
 
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -20,6 +22,7 @@ import com.example.imageprocessing.ui.theme.ImageProcessingTheme
 import androidx.compose.foundation.Image
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asAndroidBitmap
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.imageResource
@@ -27,6 +30,7 @@ import com.example.imageprocessing.Visualize.drawRectangle
 import org.opencv.android.OpenCVLoader
 import org.opencv.core.Point
 import org.opencv.core.Scalar
+import java.io.File
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -101,17 +105,20 @@ fun displayImage(
         )
 
         // read image from image resource ans display it on screen
+        val imgFile = File("/home/dell/Downloads/320748448_734027997655639_1289908280981014138_n.jpg")
+
+        // on below line we are checking if the image file exist or not.
+        var imgBitmap: Bitmap? = null
+        if (imgFile.exists()) {
+            // on below line we are creating an image bitmap variable
+            // and adding a bitmap to it from image file.
+            imgBitmap = BitmapFactory.decodeFile(imgFile.absolutePath)
+            val tgtImageBitmap = imgBitmap
+        }
+
         val oriImageBitmap = ImageBitmap.imageResource(id = imageID)
         val oriImageWidth = oriImageBitmap.width.toDouble()
-
-        drawRectangle(
-            oriImageBitmap.asAndroidBitmap(),
-            Point(0.0,  7 * oriImageWidth / 8),
-            Point(oriImageWidth, oriImageWidth),
-            Scalar( 0.0, 255.0, 255.0 ),
-            -1,
-            8,
-        )
+        val oriImageHeight = oriImageBitmap.height.toDouble()
 
         Image(
             painter = BitmapPainter(image = oriImageBitmap),
@@ -120,7 +127,51 @@ fun displayImage(
             modifier = Modifier.wrapContentSize()
         )
 
+        Text(
+            // on below line we are specifying text to display.
+            text = "After preprocessing",
+
+            // on below line we are specifying
+            // modifier to fill max width.
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(20.dp),
+
+            // on below line we are
+            // specifying text alignment.
+            textAlign = TextAlign.Center,
+
+            // on below line we are
+            // specifying color for our text.
+            color = Color.Black,
+
+            // on below line we are
+            // specifying font weight
+            fontWeight = FontWeight.Bold,
+
+            // on below line we
+            // are updating font size.
+            fontSize = 25.sp,
+        )
+
         // apply image processing algorithms into given image
+        drawRectangle(
+            tgtImageBitmap.asAndroidBitmap(),
+            Point(0.0,  oriImageHeight / 2),
+            Point(oriImageHeight, oriImageWidth),
+            Scalar( 0.0, 0.0, 255.0 ),
+            5,
+            8,
+        )
+
+        // visualize image after processing
+        Image(
+            painter = BitmapPainter(image = tgtImageBitmap),
+            contentDescription = "Target Image",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier.wrapContentSize()
+        )
+
 
 
     }

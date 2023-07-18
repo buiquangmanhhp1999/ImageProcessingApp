@@ -20,8 +20,9 @@ public class Visualize {
             Bitmap src, Point start, Point end, Scalar color, int thickness, int lineType
     )
     {
-        Mat mapSrc = new Mat();
-        Utils.bitmapToMat(src, mapSrc);
-        Imgproc.rectangle(mapSrc, start, end, color, thickness, lineType, 0);
+        Mat matSrc = new Mat();
+        Utils.bitmapToMat(src, matSrc);
+        Imgproc.rectangle(matSrc, start, end, color, thickness);
+        Utils.matToBitmap(matSrc, src);
     }
 }
