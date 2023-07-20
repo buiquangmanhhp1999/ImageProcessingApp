@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.asAndroidBitmap
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.res.painterResource
 import com.example.imageprocessing.Visualize.drawRectangle
@@ -107,8 +108,6 @@ fun displayImage(
 
         val oriBitmap = ImageBitmap.imageResource(id = imageID).asAndroidBitmap()
         val tgtBitmap = ImageBitmap.imageResource(id = imageID).asAndroidBitmap()
-        val oriImageWidth = oriBitmap.width.toDouble()
-        val oriImageHeight = tgtBitmap.height.toDouble()
 
         Image(
             painter = painterResource(id = imageID),
@@ -145,8 +144,18 @@ fun displayImage(
         )
 
         // apply image processing algorithms into given image
+
+        val bitmap = BitmapFactory.decodeResource(
+            LocalContext.current.resources,
+            imageID,
+            BitmapFactory.Options()
+        ).asImageBitmap()
+
+        val oriImageWidth = bitmap.width.toDouble()
+        val oriImageHeight = bitmap.height.toDouble()
+
         drawRectangle(
-            tgtBitmap,
+            bitmap.asAndroidBitmap(),
             Point(0.0,  oriImageHeight / 2),
             Point(oriImageHeight, oriImageWidth),
             Scalar( 0.0, 0.0, 255.0 ),
@@ -156,7 +165,7 @@ fun displayImage(
 
         // visualize image after processing
         Image(
-            bitmap = tgtBitmap.asImageBitmap(),
+            bitmap = bitmap,
             contentDescription = "Target Image",
             contentScale = ContentScale.Crop,
             modifier = Modifier.wrapContentSize()
